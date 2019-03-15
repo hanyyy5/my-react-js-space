@@ -4,7 +4,7 @@ import {
     NavLink
 } from 'react-router-dom'
 
-import Header from '../components/Header';
+import Header from '../components/LeftNav';
 
 class Course extends Component {
     render() {
