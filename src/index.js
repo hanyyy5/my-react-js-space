@@ -6,6 +6,9 @@ import {
     Switch,
     Redirect
 } from 'react-router-dom';
+import PropTypes from 'prop-types';
+import { createStore } from 'redux';
+import { Provider, connect } from 'react-redux';
 
 import 'semantic-ui-css/semantic.min.css';
 import './css/index.scss';
@@ -15,6 +18,7 @@ import News from './pages/News';
 // import NewsDetail from './pages/NewsDetail';
 import Course from './pages/Course';
 import JoinUs from './pages/JoinUs';
+import store from './pages/store';
 
 const App = () => (
     <Router>
@@ -26,7 +30,7 @@ const App = () => (
                 {/* <Route path="/news/:id" component={NewsDetail}/> */}
 
                 <Route path="/course" component={Course}/>
-                <Route path="/joinUs" render={(props)=><JoinUs {...props}/>}/>
+                <Route path="/joinUs" render={(props) => <JoinUs {...props} />}/>
                 <Route path="/error" render={(props)=><div><h1>404 not found!</h1></div>}/>
                 <Route path="*" render={(props)=><Redirect to='/error'/>}/>
             </Switch>
@@ -34,19 +38,22 @@ const App = () => (
     </Router>
 )
 ReactDom.render(
-    <App />,
+    <Provider store={store}>
+      <App />
+    </Provider>,
+   
     document.getElementById('root')
 )
 
-class App1 extends Component {
-    render() {
-        return <div className="img-outer"> </div>
-    }
-}
-ReactDom.render(
-    <App1 />,
-    document.getElementsByClassName('imgbox')[0]
-)
+// class App1 extends Component {
+//     render() {
+//         return <div className="img-outer"> </div>
+//     }
+// }
+// ReactDom.render(
+//     <App1 />,
+//     document.getElementsByClassName('imgbox')[0]
+// )
 
 
 

@@ -72,7 +72,7 @@ module.exports = {
         historyApiFallback: true, //搭建spa应用时非常有用，它使用的是HTML5 History Api，任意的跳转或404响应可以指向 index.html 页面
         inline: true, //支持dev-server自动刷新的配置
         hot: true, //启动webpack热模块替换特性
-        port: 8080,
+        port: 8008,
         historyApiFallback: true
     }
     

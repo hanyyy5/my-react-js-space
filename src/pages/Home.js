@@ -42,7 +42,7 @@ class Home extends Component {
             <div className="home">
                 <Header />
                 <h1>这是首页</h1>
-                
+
 
                 <h1>count的值：{this.state.count}</h1>
 				<div className="flexContainer">
