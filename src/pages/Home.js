@@ -4,13 +4,13 @@ import { Button } from 'semantic-ui-react'
 import '../css/index.scss';
 import '../css/home.scss';
 import LeftNav from '../components/LeftNav';
-import RightContent from '../components/LeftNav';
+import RightContent from '../components/RightContent';
 
 class Home extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            count:0
+            count: 0
         }
         this.add = this.add.bind(this)
     }
