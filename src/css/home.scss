@@ -2,6 +2,7 @@
     height: 100%;
     background: #131418;
     color: #fff;
+    overflow: hidden;
 }
 .left-nav {
     width: 200px;
@@ -9,7 +10,7 @@
     height: 100%;
     color: #fff;
     padding-left: 24px;
-    display: inline-block;
+    float: left;
     .logo {
         padding-top: 24px;
     }
@@ -57,11 +58,95 @@
     }
 }
 .right-content {
-    display: inline-block;
+    float: left;
     width: calc(100% - 200px);
     .header {
+        .search-box {
+            min-height: 75px;
+            padding: 1rem;
+            display: flex;
+            justify-content: flex-end;
+            >form {
+                flex: 1;
+                margin-right: 1rem;
+                overflow: hidden;
+                h1 {
+                    position: absolute;
+                    top: -9999px;
+                    left: -9999px;
+                }
+                .search-input-wrap {
+                    font-size: 1.3rem;
+                    position: relative;
+                    display: block;
+                    font-family: 'Lato', 'Lucida Grande', 'Lucida Sans Unicode', Tahoma, Sans-Serif;
+                    font-size: 0.9rem;
+                    height: 100%;
+                }
+                .search-input {
+                    font-weight: bold;
+                    background: #2d303a;
+                    color: white;
+                    width: 100%;
+                    margin: 0;
+                    padding: 0.4em 0.4em 0.4em 2.2em;
+                    border: 0;
+                    border-radius: 4px;
+                    height: 100%;
+                }
+            }
+        }
         #mag {
             width: 24px;
+            fill: #868ca0;
+            position: absolute;
+            top: 0;
+            left: 0.6em;
+            bottom: 0;
+            margin: auto auto auto 0;
+            width: 1em;
+            height: 1em;
+            z-index: 1;
+        }
+    }
+    .parts-wrapper {
+        height: calc(100vh - 75px);
+        overflow: auto;
+    }
+    .create-part {
+        padding: 1rem;
+        .title {
+            border-bottom: 4px solid #0ebeff;
+            padding: 1rem; 
+        }
+        .all-item-wrapper {
+            display: flex;
+            .item-tpl-wrapper {
+                width: 32%;
+                border-radius: 6px;
+                overflow: hidden;
+                margin: 0 2% 25px 0;
+                position: relative;
+                -webkit-box-shadow: 2px 2px 3px rgba(0,0,0,0.28);
+                box-shadow: 2px 2px 3px rgba(0,0,0,0.28);
+                background: #2d303a;
+                .iframe-box {
+                    height: 80%;
+                }
+                iframe {
+                    width: 100%;
+                    width: 200%;
+                    height: 200%;
+                    border: 0;
+                    background: white;
+                    -webkit-transform: scale(0.5);
+                    transform: scale(0.5);
+                    -webkit-transform-origin: top left;
+                    transform-origin: top left;
+                    -webkit-transition: opacity 0.4s ease;
+                    transition: opacity 0.4s ease;
+                }
+            }
         }
     }
 }
