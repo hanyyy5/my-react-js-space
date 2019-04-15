@@ -5,9 +5,10 @@ class ItemTpl extends Component {
         return (<div className="item-tpl-wrapper">
                      <div className="iframe-box">
                         <iframe src="https://codepen.io/kotAndy/full/wZgKyO"
+                                allowtransparency="true" 
+                                scrolling="no" 
                                 frameBorder="0" 
                                 id="" 
-                                scrolling="no" 
                                 sandbox="allow-scripts allow-pointer-lock allow-same-origin"
                                 ></iframe>
                      </div>

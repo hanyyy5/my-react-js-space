@@ -132,12 +132,21 @@
                 background: #2d303a;
                 .iframe-box {
                     height: 80%;
+                    margin-top: -18%;
+                    position: relative;
+                    height: 0;
+                    padding-top: 82.25%;
+                    overflow: hidden;
+                    background: #444857;
                 }
                 iframe {
-                    width: 100%;
                     width: 200%;
                     height: 200%;
                     border: 0;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    overflow: hidden;
                     background: white;
                     -webkit-transform: scale(0.5);
                     transform: scale(0.5);
