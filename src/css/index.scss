@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    line-height: 0;
 }
 html {
     font-family: 'Lato', 'Lucida Grande', 'Lucida Sans Unicode', Tahoma, Sans-Serif;
@@ -45,4 +46,9 @@ button {
     width: 200px;
     height: 200px;
     background: url('../images/test.png') no-repeat 0 0;
+}
+.visually-hidden {
+    position: absolute !important;
+    top: -9999px;
+    left: -9999px;
 }

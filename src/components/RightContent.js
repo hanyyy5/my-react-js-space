@@ -38,6 +38,9 @@ class RightContent extends Component {
                                         <h1 className="title">{list.titleContent}</h1>
                                         <div className="all-item-wrapper">
                                              <ItemTpl />
+                                             <ItemTpl />
+                                             <ItemTpl />
+                                             <ItemTpl />
                                         </div>
                                     </div>
                          })
