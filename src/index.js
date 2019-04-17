@@ -12,7 +12,9 @@ import { Provider, connect } from 'react-redux';
 
 import 'semantic-ui-css/semantic.min.css';
 import './css/index.scss';
+
 import Home from './pages/Home';
+import OnlineCompile from "./pages/OnlineCompile"
 import Login from './pages/Login';
 import News from './pages/News';
 import Course from './pages/Course';
@@ -24,6 +26,8 @@ const App = () => (
         <div className="index-page">
             <Switch>
                 <Route exact path="/" component={Home}/>
+                <Route path="/onlineCompile" component={OnlineCompile}/>
+
                 <Route path="/login" component={Login}/>
                 <Route path="/news" component={News}/>
 

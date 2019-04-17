@@ -1,14 +1,13 @@
 import React, { Component } from 'react'
 
-class Login extends Component {
+class OnlineCompile extends Component {
     render() {
         return (
             <div className="login">
-                <Header />
-                <h1>登录页</h1>
+                <h1>在线编译</h1>
             </div>
         )
     }
 }
 
-export default Login 
+export default OnlineCompile 

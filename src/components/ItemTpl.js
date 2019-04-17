@@ -1,28 +1,40 @@
 import React, { Component } from 'react'
+import ReactDom from 'react-dom'
+import {
+    BrowserRouter as Router,
+    Route,
+    NavLink,
+    Switch
+} from 'react-router-dom'
+
 
 class ItemTpl extends Component {
     render() {
         const headerIcon = require('../images/cute_lay.jpeg')
         return (<div className="item-tpl-wrapper">
                      <div className="iframe-box">
-                               <iframe src="https://codepen.io/kotAndy/full/wZgKyO"
-                                    allowtransparency="true" 
-                                    name="iframe_some"
-                                    scrolling="no" 
-                                    frameBorder="0" 
-                                    id="" 
-                                    sandbox="allow-scripts allow-pointer-lock allow-same-origin"
-                                ></iframe>
-                                <a href="https://codepen.io/H2xDev/pen/qwrzoa" className="cover-link">
-                                    <span className="visually-hidden">
-                                        Composite Operation Experiment
-                                    </span>
-                                </a>
-                                <div className="meta-overlay" tabIndex="0">
-                                    <div className="pen-actions">
-                                        <a href="#0" className="button mini-button button-dark add-to-collection-from-flyout">+ 添加到收藏</a>
-                                    </div>
-                                </div>
+                       
+                        <iframe src="https://codepen.io/kotAndy/full/wZgKyO"
+                                allowtransparency="true" 
+                                name="iframe_some"
+                                scrolling="no" 
+                                frameBorder="0" 
+                                id="" 
+                                sandbox="allow-scripts allow-pointer-lock allow-same-origin"
+                        ></iframe>
+                        <NavLink to="/OnlineCompile">
+                            <div className="cover-link">
+                                <span className="visually-hidden">
+                                    Composite Operation Experiment
+                                </span>
+                            </div>
+                        </NavLink>
+                      
+                        <div className="meta-overlay" tabIndex="0">
+                            <div className="pen-actions">
+                                <a href="#0" className="button mini-button button-dark add-to-collection-from-flyout">+ 添加到收藏</a>
+                            </div>
+                        </div>
                      </div>
                      <div className="meta">
                         <div className="meta-container">
